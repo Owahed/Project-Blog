@@ -1,0 +1,35 @@
+.full_container{
+    width: 100%;
+    margin-top: 50px;
+}
+.atomic{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFF;
+}
+.dot_line{
+    width: 30px;
+    margin-bottom: 5px;
+    background-color: #9a58b5;
+    height: 3px;    
+}
+.first_container{
+    margin-top: 30px;
+}
+.first_container img{
+    width: 250px;
+    margin-bottom: 20px;
+}
+.first_container h4{
+    color: #56585c;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.border_first_container{
+    border-top: 1px solid #DEDEDE;
+    margin: 10px 0 10px 0;
+    width: 45px;
+    height: 1px;
+}
