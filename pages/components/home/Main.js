@@ -1,6 +1,8 @@
 import Styles from "../../../styles/Main.module.css";
 import Container from "@mui/material/Container";
 import FirstContainer from "./FirstContainer";
+import SecondContainer from "./SecondContainer";
+import ThirdContainer from "./ThirdContainer";
 
 const home = () => {
   return (
@@ -15,8 +17,12 @@ const home = () => {
               <div className={Styles.item1}>
                 <FirstContainer />
               </div>
-              <div className={Styles.item2}>dfsdf</div>
-              <div className={Styles.item3}>dfsd</div>
+              <div className={Styles.item2}>
+                <SecondContainer />
+              </div>
+              <div className={Styles.item3}>
+                <ThirdContainer />
+              </div>
             </div>
           </Container>
         </div>

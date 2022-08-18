@@ -2,15 +2,13 @@ import Link from "next/link";
 import Data from "../../../FakeData/FakeData.json";
 import Styles from "../../../styles/FirstContainer.module.css";
 
-const FirstContainer = () => {
+const ThirdContainer = () => {
   var reverse = Data.slice().reverse();
-  const citrus = reverse.slice(3, 6);
+  const citrus = reverse.slice(6, 9);
   return (
     <>
       <div className={Styles.full_container}>
         <div>
-          <div className={Styles.dot_line}></div>
-          <h5 className={Styles.atomic}>Popular Now</h5>
           <div className={Styles.first_container}>
             {citrus.map((element) => (
               <>
@@ -30,4 +28,4 @@ const FirstContainer = () => {
   );
 };
 
-export default FirstContainer;
+export default ThirdContainer;

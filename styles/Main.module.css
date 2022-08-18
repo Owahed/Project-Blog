@@ -21,14 +21,14 @@
     grid-auto-rows: auto;
 }
 .item1{
-   
+ 
 }
 .item2{
-    background-color: aqua !important;
+   
     grid-column: span 2 ;
 }
 .item3{
-    background-color: green !important;
+  
 }
 
 @media screen and (max-width: 960px) {

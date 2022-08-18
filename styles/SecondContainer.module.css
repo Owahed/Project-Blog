@@ -1,0 +1,34 @@
+
+.full_container{
+    width: 100%;
+    margin-top: 50px;
+}
+.first_container{
+    padding-bottom: 40px;
+}
+.first_container img{
+    width: 545px;
+}
+.first_container h1{
+    line-height: 50px;
+    font-weight: 400;
+    font-size: 42px;
+    color: #2b2d32;
+}
+.first_container h3{
+    font-size: 24px;
+    padding-top: 10px;
+    line-height: 30px;
+    color: #56585c;
+    font-weight: 400;
+}
+.second_container{
+    display: flex; 
+}
+.second_container img{
+    width: 265px;
+    height: 165px;
+}
+.second_container h3{
+    margin-top: 20px;
+}
