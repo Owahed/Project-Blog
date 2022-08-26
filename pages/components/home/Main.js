@@ -7,7 +7,7 @@ import ThirdContainer from "./ThirdContainer";
 const home = () => {
   return (
     <>
-      <div>
+      <div className={Styles.main}>
         <div className={Styles.hr}></div>
         <div className={Styles.container}></div>
         <div className={Styles.hr}></div>

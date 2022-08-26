@@ -1,0 +1,21 @@
+.pageNo_img{
+    width: 100%;
+}
+.pageNo_title{
+    margin-top: 20px;
+    color: #0b0c0d;
+    margin-bottom: 20px;
+    line-height: 60px;
+    font-size: 56px;
+}
+.pageNo_SubTitle{
+    font-size: 24px;
+    color: #0b0c0d;
+    line-height: 32px;
+}
+.pageNo_p{
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

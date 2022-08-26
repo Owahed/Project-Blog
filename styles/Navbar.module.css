@@ -112,7 +112,9 @@
   .nav_icon {
     display: none;
   }
-  
+  .back_button{
+    display: none;
+  }
   @media screen and (max-width: 960px) {
     .navbar_container{
         background-color: #2b2c32 !important;
@@ -156,5 +158,9 @@
       font-size: 1.8rem;
       cursor: pointer;
       color: #fff;
+    }
+    .back_button{
+      display: block;
+      padding: 5px;
     }
   }

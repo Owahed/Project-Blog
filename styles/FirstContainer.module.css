@@ -35,3 +35,9 @@
     width: 45px;
     height: 1px;
 }
+
+@media screen and (max-width: 960px) {
+    .full_container{
+        display: none;
+    }
+}

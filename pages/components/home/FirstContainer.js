@@ -14,7 +14,12 @@ const FirstContainer = () => {
           <div className={Styles.first_container}>
             {citrus.map((element) => (
               <>
-                <Link href="/">
+                <Link
+                  key={element.id}
+                  href={{
+                    pathname: `components/home/${element.id}`,
+                  }}
+                >
                   <a>
                     <img src={element.image} alt="" />
                     <h4>{element.title}</h4>

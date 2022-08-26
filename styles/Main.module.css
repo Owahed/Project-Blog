@@ -2,6 +2,7 @@
     background-color: #2b2c32;
     width: 100%;
     height: 100px;
+    position: relative;
 }
 .hr{
     border-bottom-color : rgba(43,44,50,0.10);
@@ -10,9 +11,9 @@
 }
 .main_container{
     width: 100%;
-    height: 1000px;
-    background: -webkit-linear-gradient(top, #2b2c32 20%, #fff 20%);
-
+    height: 945px;
+    background: -webkit-linear-gradient(top, #2b2c32 20%, #f4f4f5 20%);
+    margin-bottom: 80px;
 }
 .main_div{
     display: grid;
@@ -35,4 +36,7 @@
     .main_div{
         grid-template-columns: repeat(1,1fr);
     } 
+    .main{
+        display: block;
+    }
 }

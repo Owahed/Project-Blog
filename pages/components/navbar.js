@@ -14,8 +14,10 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import SearchIcon from "@mui/icons-material/Search";
+import Link from "next/link";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
-const navbar = () => {
+const navbar = ({ id }) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -29,6 +31,17 @@ const navbar = () => {
               <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
                   <Toolbar>
+                    {id ? (
+                      <Link
+                        href={{
+                          pathname: `/`,
+                        }}
+                      >
+                        <ArrowBackIosIcon className={Styles.back_button} />
+                      </Link>
+                    ) : (
+                      <div></div>
+                    )}
                     <Typography
                       variant="h6"
                       component="div"
