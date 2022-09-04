@@ -2,6 +2,7 @@ import { Container } from "@mui/system";
 import Styles from "../../styles/AllBlog.module.css";
 import Data from "../../FakeData/FakeData.json";
 import Link from "next/link";
+import { useState } from "react";
 
 const AllBlog = () => {
   return (

@@ -1,14 +1,11 @@
+import React, { useState } from "react";
 import Styles from "../../styles/Navbar.module.css";
-
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import React, { useState } from "react";
 import ClearIcon from "@mui/icons-material/Clear";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -16,11 +13,15 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "next/link";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import UseToggle from "../CustomHooks/useToggle";
 
 const navbar = ({ id }) => {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => setClick(!click);
+  const [isShown, toggle] = UseToggle();
+  // const [click, setClick] = useState<boolean>(false);
+  // const [click, setClick] = useState(  false );
+  // const click = false;
+  // console.log(isShown, "hh", toggle);
+  const handleClick = () => toggle(!isShown);
   return (
     <>
       <div>
@@ -69,10 +70,9 @@ const navbar = ({ id }) => {
                     <a exact href="#" className={Styles.nav_logo}>
                       C-Name
                     </a>
-
                     <ul
                       className={
-                        click
+                        isShown
                           ? `${Styles.nav_menu} ${Styles.active}`
                           : `${Styles.nav_menu}`
                       }
@@ -132,9 +132,12 @@ const navbar = ({ id }) => {
                           Login
                         </a>
                       </li>
-                    </ul>
+                    </ul>{" "}
+                    {/* <button onClick={handleClick}>
+                      {isShown ? "show" : "hide"}
+                    </button> */}
                     <div className={Styles.nav_icon} onClick={handleClick}>
-                      {click ? <ClearIcon /> : <MenuIcon />}
+                      {isShown ? <ClearIcon /> : <MenuIcon />}
                     </div>
                   </div>
                 </nav>

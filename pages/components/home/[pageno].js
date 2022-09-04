@@ -3,6 +3,7 @@ import data from "../../../FakeData/FakeData.json";
 import Navbar from "../navbar";
 import Styles from "../../../styles/Pageno.module.css";
 import { Container } from "@mui/system";
+import { useState } from "react";
 
 // export const getData = () => {
 //   const paths = data.map((e) => {
