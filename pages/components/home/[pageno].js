@@ -37,7 +37,7 @@ const PageNo = () => {
   return (
     <>
       <div>
-        <Navbar id={id} />
+        {/* <Navbar id={id} /> */}
         <div>
           <img className={Styles.pageNo_img} src={image} alt="" />
           <Container fixed>
