@@ -11,7 +11,7 @@ const ThirdContainer = () => {
         <div>
           <div className={Styles.first_container}>
             {citrus.map((element) => (
-              <>
+              <div key={element.id}>
                 <Link
                   key={element.id}
                   href={{
@@ -24,7 +24,7 @@ const ThirdContainer = () => {
                   </a>
                 </Link>
                 <div className={Styles.border_first_container}></div>
-              </>
+              </div>
             ))}
           </div>
         </div>

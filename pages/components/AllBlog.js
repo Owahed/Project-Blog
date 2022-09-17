@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const AllBlog = () => {
+  const [mainData, setMainData] = useState(Data);
   return (
     <>
       <div className={Styles.all_blog}>
@@ -15,8 +16,8 @@ const AllBlog = () => {
           </div>
           <div className={Styles.border_first_container}></div>
           <div>
-            {Data.map((element) => (
-              <>
+            {mainData.map((element) => (
+              <div key={element.id}>
                 <div className={Styles.blog_card}>
                   <Link
                     key={element.id}
@@ -44,7 +45,7 @@ const AllBlog = () => {
                   </div>
                 </div>
                 <div className={Styles.border_first_container}></div>
-              </>
+              </div>
             ))}
           </div>
         </Container>

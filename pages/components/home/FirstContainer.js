@@ -13,7 +13,7 @@ const FirstContainer = () => {
           <h5 className={Styles.atomic}>Popular Now</h5>
           <div className={Styles.first_container}>
             {citrus.map((element) => (
-              <>
+              <div key={element.id}>
                 <Link
                   key={element.id}
                   href={{
@@ -25,9 +25,9 @@ const FirstContainer = () => {
                     <h4>{element.title}</h4>
                   </a>
                 </Link>
-                <div className={Styles.border_first_container}></div>
-              </>
+              </div>
             ))}
+            <div className={Styles.border_first_container}></div>
           </div>
         </div>
       </div>

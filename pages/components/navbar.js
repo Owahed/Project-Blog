@@ -26,7 +26,6 @@ const navbar = ({ id }) => {
     <>
       <div>
         <div>
-          {" "}
           <Container fixed>
             <div>
               <Box sx={{ flexGrow: 1 }}>
@@ -64,7 +63,6 @@ const navbar = ({ id }) => {
           <div className={Styles.navbar_second_div}>
             <Container fixed>
               <div>
-                {" "}
                 <nav className={Styles.navbar}>
                   <div className={Styles.nav_container}>
                     <a exact href="#" className={Styles.nav_logo}>
