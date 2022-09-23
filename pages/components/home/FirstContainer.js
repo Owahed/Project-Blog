@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Data from "../../../FakeData/FakeData.json";
 import Styles from "../../../styles/FirstContainer.module.css";
@@ -21,7 +22,15 @@ const FirstContainer = () => {
                   }}
                 >
                   <a>
-                    <img src={element.image} alt="" />
+                    <Image
+                      loader={() => element.image}
+                      src={element.image}
+                      unoptimized={true}
+                      alt="Image"
+                      width={1080}
+                      height={810}
+                      priority
+                    />
                     <h4>{element.title}</h4>
                   </a>
                 </Link>

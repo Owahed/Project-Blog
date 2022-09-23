@@ -5,49 +5,62 @@ import Styles from "../../../styles/Pageno.module.css";
 import { Container } from "@mui/system";
 import { useState } from "react";
 import { useEffect } from "react";
+import Image from "next/image";
 
-// export const getData = () => {
-//   const paths = data.map((e) => {
-//     return {
-//       params: {
-//         pageNo: e.id.toString(),
-//       },
-//     };
-//   });
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
-// console.log(paths);
+export const getStaticPaths = async () => {
+  const data = await Data;
 
-// export function getServerSideProps(context) {
-//   return {
-//     props: { params: context.params },
-//   };
-// }
-const PageNo = () => {
-  const [data, setData] = useState();
+  const paths = data.map((e) => {
+    return {
+      params: {
+        pageno: e.id.toString(),
+      },
+    };
+  });
 
-  const router = useRouter();
-  const { pageno } = router.query;
-  // useEffect(() => {
-  const mainData = Data?.find((c) => c.id == pageno);
-  console.log(mainData);
-  // }, []);
+  return {
+    paths,
+    fallback: false,
+  };
+};
 
-  console.log(data);
+export const getStaticProps = async (context) => {
+  const id = context.params.pageno;
+  const mainData = Data?.find((c) => c.id == id);
+
+  return {
+    props: {
+      mainData,
+    },
+  };
+};
+const PageNo = ({ mainData }) => {
+  // const [data, setData] = useState();
+
+  // const router = useRouter();
+  // const { pageno } = router.query;
+
+  // const mainData = Data?.find((c) => c.id == pageno);
+  // console.log(mainData);
+
+  // console.log(data);
   const { image, imageSubTitle, title, subTitle, blog, id } = mainData;
 
-  // const { pageno } = params;
-  // console.log(pageno);
   return (
     <>
       <div>
-        {/* <Navbar id={id} /> */}
         {mainData ? (
           <div>
-            <img className={Styles.pageNo_img} src={image} alt="" />
+            <Image
+              loader={() => image}
+              unoptimized={true}
+              alt="Image"
+              width={1080}
+              height={810}
+              priority
+              className={Styles.pageNo_img}
+              src={image}
+            />
             <Container fixed>
               <p>{imageSubTitle}</p>
               <div>
@@ -62,6 +75,7 @@ const PageNo = () => {
           <h1>Loading...</h1>
         )}
       </div>
+      {/* <h1>hi{mainData.id}</h1> */}
     </>
   );
 };

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Data from "../../../FakeData/FakeData.json";
 import Styles from "../../../styles/SecondContainer.module.css";
@@ -18,7 +19,15 @@ const SecondContainer = () => {
             }}
           >
             <a>
-              <img src={lastThreeElement[2].image} alt="" />
+              <Image
+                loader={() => lastThreeElement[2].image}
+                src={lastThreeElement[2].image}
+                unoptimized={true}
+                alt="Image"
+                width={1080}
+                height={810}
+                priority
+              />
               <h1>{lastThreeElement[2].title}</h1>
             </a>
           </Link>
@@ -33,7 +42,15 @@ const SecondContainer = () => {
               }}
             >
               <a>
-                <img src={lastThreeElement[1].image} alt="" />
+                <Image
+                  loader={() => lastThreeElement[1].image}
+                  src={lastThreeElement[1].image}
+                  unoptimized={true}
+                  alt="Image"
+                  width={1080}
+                  height={810}
+                  priority
+                />
                 <h3>{lastThreeElement[1].title}</h3>
               </a>
             </Link>
@@ -46,7 +63,15 @@ const SecondContainer = () => {
               }}
             >
               <a>
-                <img src={lastThreeElement[0].image} alt="" />
+                <Image
+                  loader={() => lastThreeElement[0].image}
+                  src={lastThreeElement[0].image}
+                  unoptimized={true}
+                  alt="Image"
+                  width={1080}
+                  height={810}
+                  priority
+                />
                 <h3>{lastThreeElement[0].title}</h3>
               </a>
             </Link>

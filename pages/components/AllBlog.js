@@ -3,6 +3,7 @@ import Styles from "../../styles/AllBlog.module.css";
 import Data from "../../FakeData/FakeData.json";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 const AllBlog = () => {
   const [mainData, setMainData] = useState(Data);
@@ -26,7 +27,15 @@ const AllBlog = () => {
                     }}
                   >
                     <a>
-                      <img src={element.image} alt="" />
+                      <Image
+                        loader={() => element.image}
+                        src={element.image}
+                        unoptimized={true}
+                        alt="Image"
+                        width={1000}
+                        height={810}
+                        priority
+                      />
                     </a>
                   </Link>
                   <div className={Styles.blog_card_title}>
