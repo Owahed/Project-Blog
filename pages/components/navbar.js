@@ -13,7 +13,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "next/link";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import UseToggle from "../CustomHooks/useToggle";
+import UseToggle from "../../CustomHooks/useToggle";
 
 const navbar = ({ id }) => {
   const [isShown, toggle] = UseToggle();
