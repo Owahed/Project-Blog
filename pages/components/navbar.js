@@ -13,18 +13,17 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "next/link";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import UseToggle from "../../CustomHooks/useToggle";
 
 const navbar = ({ id }) => {
-  const [isShown, toggle] = UseToggle();
+  // const [isShown, toggle] = UseToggle();
   // const [click, setClick] = useState<boolean>(false);
   // const [click, setClick] = useState(  false );
   // const click = false;
   // console.log(isShown, "hh", toggle);
-  const handleClick = () => toggle(!isShown);
+  // const handleClick = () => toggle(!isShown);
   return (
     <>
-      <div>
+      {/* <div>
         <div>
           <Container fixed>
             <div>
@@ -131,9 +130,9 @@ const navbar = ({ id }) => {
                         </a>
                       </li>
                     </ul>{" "}
-                    {/* <button onClick={handleClick}>
+                     <button onClick={handleClick}>
                       {isShown ? "show" : "hide"}
-                    </button> */}
+                    </button> 
                     <div className={Styles.nav_icon} onClick={handleClick}>
                       {isShown ? <ClearIcon /> : <MenuIcon />}
                     </div>
@@ -143,6 +142,9 @@ const navbar = ({ id }) => {
             </Container>
           </div>
         </div>
+      </div> */}
+      <div>
+        <h1>hi</h1>
       </div>
     </>
   );
