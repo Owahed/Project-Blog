@@ -26,14 +26,15 @@ const AllBlog = () => {
                       pathname: `components/home/${element.id}`,
                     }}
                   >
-                    <a>
+                    <a className={Styles.blog_card_img}>
                       <Image
                         loader={() => element.image}
                         src={element.image}
                         unoptimized={true}
                         alt="Image"
-                        width={1000}
-                        height={810}
+                        width={400}
+                        height={220}
+                        // layout="fill"
                         priority
                       />
                     </a>

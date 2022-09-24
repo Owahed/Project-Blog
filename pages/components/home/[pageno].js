@@ -51,18 +51,19 @@ const PageNo = ({ mainData }) => {
       <div>
         {mainData ? (
           <div>
-            <Image
-              loader={() => image}
-              unoptimized={true}
-              alt="Image"
-              width={1080}
-              height={810}
-              priority
-              className={Styles.pageNo_img}
-              src={image}
-            />
-            <Container fixed>
+            <div className={Styles.pageNo_img}>
+              <Image
+                loader={() => image}
+                unoptimized={true}
+                alt="Image"
+                width={1080}
+                height={810}
+                priority
+                src={image}
+              />
               <p>{imageSubTitle}</p>
+            </div>
+            <Container fixed>
               <div>
                 <h1 className={Styles.pageNo_title}>{title}</h1>
                 <h5 className={Styles.pageNo_SubTitle}>{subTitle}</h5>

@@ -24,8 +24,8 @@
 .blog_card{
     display: flex;  
 }
-.blog_card img{
-    width: 350px;
+.blog_card_img{
+    width: 350px !important;
 }
 .blog_card img:hover{
     opacity: .8;

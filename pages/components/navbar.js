@@ -144,7 +144,42 @@ const navbar = ({ id }) => {
         </div>
       </div> */}
       <div>
-        <h1>hi</h1>
+        <div>
+          <Container fixed>
+            <div>
+              <Box sx={{ flexGrow: 1 }}>
+                <AppBar position="static">
+                  <Toolbar>
+                    {id ? (
+                      <Link
+                        href={{
+                          pathname: `/`,
+                        }}
+                      >
+                        <ArrowBackIosIcon className={Styles.back_button} />
+                      </Link>
+                    ) : (
+                      <div></div>
+                    )}
+                    <Typography
+                      variant="h6"
+                      component="div"
+                      sx={{ flexGrow: 1 }}
+                    >
+                      News
+                    </Typography>
+                    <div className={Styles.iconBar}>
+                      <FacebookIcon />
+                      <TwitterIcon />
+                      <YouTubeIcon />
+                      <SearchIcon />
+                    </div>
+                  </Toolbar>
+                </AppBar>
+              </Box>
+            </div>
+          </Container>
+        </div>
       </div>
     </>
   );
