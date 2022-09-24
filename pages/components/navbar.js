@@ -13,6 +13,11 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "next/link";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+import Slide from "@mui/material/Slide";
+import PropTypes from "prop-types";
+import { CssBaseline } from "@mui/material";
 
 const navbar = ({ id }) => {
   // const [isShown, toggle] = UseToggle();
@@ -21,6 +26,16 @@ const navbar = ({ id }) => {
   // const click = false;
   // console.log(isShown, "hh", toggle);
   // const handleClick = () => toggle(!isShown);
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: "dark",
+      primary: {
+        main: "#1976d2",
+      },
+    },
+  });
+
   return (
     <>
       {/* <div>
@@ -145,40 +160,46 @@ const navbar = ({ id }) => {
       </div> */}
       <div>
         <div>
-          <Container fixed>
-            <div>
-              <Box sx={{ flexGrow: 1 }}>
+          <div>
+            <Box sx={{ flexGrow: 1 }}>
+              {" "}
+              <ThemeProvider theme={darkTheme}>
+                {" "}
                 <AppBar position="static">
-                  <Toolbar>
-                    {id ? (
-                      <Link
-                        href={{
-                          pathname: `/`,
-                        }}
+                  {" "}
+                  <Container fixed>
+                    <Toolbar>
+                      {" "}
+                      {id ? (
+                        <Link
+                          href={{
+                            pathname: `/`,
+                          }}
+                        >
+                          <ArrowBackIosIcon className={Styles.back_button} />
+                        </Link>
+                      ) : (
+                        <div></div>
+                      )}
+                      <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ flexGrow: 1 }}
                       >
-                        <ArrowBackIosIcon className={Styles.back_button} />
-                      </Link>
-                    ) : (
-                      <div></div>
-                    )}
-                    <Typography
-                      variant="h6"
-                      component="div"
-                      sx={{ flexGrow: 1 }}
-                    >
-                      News
-                    </Typography>
-                    <div className={Styles.iconBar}>
-                      <FacebookIcon />
-                      <TwitterIcon />
-                      <YouTubeIcon />
-                      <SearchIcon />
-                    </div>
-                  </Toolbar>
+                        News
+                      </Typography>
+                      <div className={Styles.iconBar}>
+                        <FacebookIcon />
+                        <TwitterIcon />
+                        <YouTubeIcon />
+                        <SearchIcon />
+                      </div>
+                    </Toolbar>
+                  </Container>
                 </AppBar>
-              </Box>
-            </div>
-          </Container>
+              </ThemeProvider>
+            </Box>
+          </div>
         </div>
       </div>
     </>

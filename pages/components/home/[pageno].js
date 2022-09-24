@@ -48,6 +48,7 @@ const PageNo = ({ mainData }) => {
 
   return (
     <>
+      <Navbar id={id} />
       <div>
         {mainData ? (
           <div>
