@@ -6,6 +6,7 @@ import { Container } from "@mui/system";
 import { useState } from "react";
 import { useEffect } from "react";
 import Image from "next/image";
+import Footer from "../Footer";
 
 export const getStaticPaths = async () => {
   const data = await Data;
@@ -77,6 +78,7 @@ const PageNo = ({ mainData }) => {
           <h1>Loading...</h1>
         )}
       </div>
+      <Footer />
       {/* <h1>hi{mainData.id}</h1> */}
     </>
   );
